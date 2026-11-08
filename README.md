@@ -1,4 +1,4 @@
-# Pennsylvania Health Insurance Audit, October 2026: Rating Area One-Pagers (v1.0)
+# Pennsylvania Health Insurance Audit, NOVEMBER 2026: Rating Area One-Pagers (v1.0)
 
 # Pennsylvania Health Insurance Audit System
 
