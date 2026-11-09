@@ -1,0 +1,4 @@
+plan_year,self_only_usd,family_usd,tier,source_url,note
+2025,9200,18400,UNVERIFIED,,Recollection only; not retrieved this pass. This is the figure the submitted draft mislabeled as the 2026 limit
+2026,10600,21200,SECONDARY,https://www.healthinsurance.org/glossary/out-of-pocket-maximum-limit/,
+2027,12000,24000,SECONDARY,https://www.healthinsurance.org/glossary/out-of-pocket-maximum-limit/,"CMS guidance dated 2026-01-29: https://www.cms.gov/files/document/2027-papi-parameters-guidance-2026-01-29.pdf (cited by several secondary sources; PDF not fetched this pass). Some bronze plans may go to 130% = 15,600"

@@ -1,0 +1,12 @@
+id,topic,source_a,source_b,status,resolution_or_next_step
+X01,Open enrollment 2027 dates,Aug 2026 status report: Oct 15-Dec 15 (single deadline Dec 15),"Pennie board reinstated Nov 1, 2026-Jan 15, 2027 after court action; Dec 15 for Jan 1 coverage",RESOLVED,Use Nov 1-Jan 15. The shorter window is superseded.
+X02,PY2027 statewide individual average,Draft: ~16.0% 'requested',"PID: 17.14% requested, 15.97% approved",RESOLVED,PID primary release controls.
+X03,Peak enrollment,"Draft: 501,459 (PY2026 OEP)","Pennie: 497,000 (2025 peak), 486,000 (2026 OE close)",OPEN,"501,459 not found; do not publish."
+X04,Sept 2026 enrollment,"Draft: 417,158 exact","Legislators' release: 417,000 rounded",OPEN,Locate Pennie's own dataset for the exact figure.
+X05,Enrollment drop during OE 2026,"85,000 (Inquirer/Audacy, project notes)","About 92,000 (Pennie release as reprinted) and 120,000 (WHYY/Q2 per project notes)",OPEN,Retain all with attribution; definitions differ (terminations vs net).
+X06,Highmark Benefits Group rate,PY2026 approved 21.0% (Aug status report),PY2027 requested 21.4% / approved 19.7% (PID),RESOLVED,Different plan years; the '21.40%' in earlier notes is the PY2027 request.
+X07,Geisinger Health Plan rate,PY2026 approved 11.6% (Aug status report),PY2027 requested 10.5% / approved 8.6% (PID),RESOLVED,Different plan years; '10.46%' in earlier notes is the PY2027 request.
+X08,Partners Insurance Company PY2026,Status report lists both -10.1% and 20.5% as approved,20.5% equals the PY2027 requested figure,OPEN,Do not publish PY2026 carrier-level rates from the status report until re-pulled from PID's 2026 release.
+X09,Ambetter Health Solutions of Pennsylvania,Listed in all nine area reports,Not in PID's 2026-09-18 list of 14 individual-market carriers,OPEN,Check PID filing search; may be a companion or retired filing.
+X10,Number of individual carriers,'At least 13' (area reports),PID release lists 14 individual-market entities,RESOLVED,Use 14 entities (some share a parent).
+X11,Out-of-pocket cap,"Draft: $9,200 'per 2026'","2026: $10,600; 2027: $12,000",RESOLVED,Use 2027 values for PY2027.
