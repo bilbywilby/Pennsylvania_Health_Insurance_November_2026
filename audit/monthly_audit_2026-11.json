@@ -1,0 +1,41 @@
+{
+  "audit_date": "2026-11-08",
+  "comparison_period": "Previous: August 2026 status report (data through 2026-07-01) | Current: 2026-11-08",
+  "overall_status": "WARNING",
+  "source_accessibility": {
+    "pid_aca_2027_rate_release": "OK (fetched 2026-11-08, HTTP content retrieved)",
+    "pennie_portal": "NOT_CHECKED",
+    "cms_idr_reports": "NOT_COLLECTED",
+    "pid_notices": "NOT_CHECKED"
+  },
+  "metrics_comparison": {
+    "pennie_enrollment": {"previous": 431270, "previous_as_of": "2026-07-01", "current": 417000, "current_as_of": "2026-09 (rounded, secondary)", "change_pct": -3.31, "note": "Different as-of dates; not a month-over-month figure. Threshold (>10%) not exceeded."},
+    "cms_idr_initiations": {"previous": null, "current": null, "change_pct": null, "note": "NOT_COLLECTED this pass; national figures only when collected"},
+    "pid_new_filings": {"previous": null, "current": null, "count": null, "note": "PID approved 2027 rates on 2026-09-18; final approval event, not a new filing"},
+    "pid_consumer_complaints": {"previous": null, "current": null, "change_pct": null, "note": "NOT_COLLECTED this pass"}
+  },
+  "flags_raised": [
+    {"metric": "py2027_rate_approval", "reason": "PID approved individual average +15.97% (requested 17.14%); 11 of 14 carriers approved above 10%; 3 carriers approved above request", "severity": "high"},
+    {"metric": "draft_figure_integrity", "reason": "Submitted draft's requested 16.0%, peak 501,459 and exact 417,158 are not supported by sources; 16.0% was the approved rate", "severity": "high"},
+    {"metric": "plan_year_labels", "reason": "Highmark Benefits Group 21.40% and Geisinger 10.46% in earlier notes are PY2027 requested rates, not PY2026 approved", "severity": "medium"},
+    {"metric": "open_enrollment_dates", "reason": "Aug status report dates (Oct 15-Dec 15) superseded by Nov 1, 2026-Jan 15, 2027; enrollment is open now", "severity": "medium"},
+    {"metric": "oop_limit", "reason": "Draft used $9,200; 2027 limit is $12,000 self-only / $24,000 family", "severity": "medium"}
+  ],
+  "new_citations_detected": [
+    {"citation": "42 U.S.C. 18063 (ACA section 1343)", "status": "verified"},
+    {"citation": "45 CFR 155.335(j)", "status": "verified (paragraph exists; draft's tier wording unverified)"}
+  ],
+  "action_items": [
+    "Open the CMS 2027 cost-sharing guidance PDF and confirm $12,000 / $24,000 (currently SECONDARY).",
+    "Locate Pennie's primary enrollment dataset for the September 2026 count.",
+    "Re-pull PID's 2026 carrier-level approved rates before any year-over-year carrier comparison (conflict X08).",
+    "Check whether Ambetter Health Solutions of Pennsylvania has a 2027 filing (conflict X09).",
+    "Quote 45 CFR 155.335(j) text from eCFR and rewrite the crosswalk hierarchy.",
+    "Collect CMS IDR national monthly counts and PID complaint statistics for the next audit."
+  ],
+  "notes_for_next_audit": [
+    "Open enrollment closes 2027-01-15; Dec 15 is the Jan 1 coverage deadline.",
+    "Watch whether Pennie publishes OE 2027 enrollment snapshots; use the same definition (active vs terminated) each month.",
+    "H.R. 1 eligibility limits for several immigrant groups begin 2027-01-01."
+  ]
+}

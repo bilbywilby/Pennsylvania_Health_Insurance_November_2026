@@ -1,0 +1,225 @@
+{
+  "C1_trend": {
+    "high": {
+      "additive_pct": "12.00",
+      "components_pct": [
+        6.5,
+        3.0,
+        2.5
+      ],
+      "compound_factor": "1.124373750",
+      "compound_pct": "12.44",
+      "trend_only_factor": "1.096950000",
+      "trend_only_pct_ex_morbidity": "9.70"
+    },
+    "low": {
+      "additive_pct": "8.50",
+      "components_pct": [
+        5.0,
+        2.0,
+        1.5
+      ],
+      "compound_factor": "1.087065000",
+      "compound_pct": "8.71",
+      "trend_only_factor": "1.071000000",
+      "trend_only_pct_ex_morbidity": "7.10"
+    }
+  },
+  "C2_attrition": {
+    "A_draft": {
+      "K": "0.8319",
+      "K_below_0_85_trigger": true,
+      "K_below_0_92_target": true,
+      "attrition_pct": "16.81",
+      "baseline": 501459,
+      "current": 417158,
+      "net_loss": 84301
+    },
+    "B_peak2025_to_sep2026": {
+      "K": "0.8390",
+      "K_below_0_85_trigger": true,
+      "K_below_0_92_target": true,
+      "attrition_pct": "16.10",
+      "baseline": 497000,
+      "current": 417000,
+      "net_loss": 80000
+    },
+    "C_oe_close_to_sep2026": {
+      "K": "0.8580",
+      "K_below_0_85_trigger": false,
+      "K_below_0_92_target": true,
+      "attrition_pct": "14.20",
+      "baseline": 486000,
+      "current": 417000,
+      "net_loss": 69000
+    }
+  },
+  "C3_rate_review": {
+    "approved_over_10pct": [
+      "Ambetter Health of Pennsylvania Inc",
+      "Capital Advantage Assurance Company",
+      "Geisinger Quality Options",
+      "Health Partners Plans Inc",
+      "Highmark Benefits Group",
+      "Highmark Inc",
+      "Keystone Health Plan Central",
+      "Keystone Health Plan East",
+      "Partners Insurance Company Inc",
+      "QCC Insurance Company",
+      "UPMC Health Plan Inc"
+    ],
+    "carriers": [
+      {
+        "approved": "35.1",
+        "carrier": "Ambetter Health of Pennsylvania Inc",
+        "delta_pp": "-5.8",
+        "premium_level_change_vs_request_pct": "-4.12",
+        "requested": "40.9"
+      },
+      {
+        "approved": "14.8",
+        "carrier": "Capital Advantage Assurance Company",
+        "delta_pp": "-3.5",
+        "premium_level_change_vs_request_pct": "-2.96",
+        "requested": "18.3"
+      },
+      {
+        "approved": "8.6",
+        "carrier": "Geisinger Health Plan",
+        "delta_pp": "-1.9",
+        "premium_level_change_vs_request_pct": "-1.72",
+        "requested": "10.5"
+      },
+      {
+        "approved": "10.7",
+        "carrier": "Geisinger Quality Options",
+        "delta_pp": "-2.3",
+        "premium_level_change_vs_request_pct": "-2.04",
+        "requested": "13.0"
+      },
+      {
+        "approved": "18.3",
+        "carrier": "Health Partners Plans Inc",
+        "delta_pp": "2.4",
+        "premium_level_change_vs_request_pct": "2.07",
+        "requested": "15.9"
+      },
+      {
+        "approved": "19.7",
+        "carrier": "Highmark Benefits Group",
+        "delta_pp": "-1.7",
+        "premium_level_change_vs_request_pct": "-1.40",
+        "requested": "21.4"
+      },
+      {
+        "approved": "14.5",
+        "carrier": "Highmark Inc",
+        "delta_pp": "-1.7",
+        "premium_level_change_vs_request_pct": "-1.46",
+        "requested": "16.2"
+      },
+      {
+        "approved": "33.4",
+        "carrier": "Keystone Health Plan Central",
+        "delta_pp": "-0.4",
+        "premium_level_change_vs_request_pct": "-0.30",
+        "requested": "33.8"
+      },
+      {
+        "approved": "16.0",
+        "carrier": "Keystone Health Plan East",
+        "delta_pp": "1.3",
+        "premium_level_change_vs_request_pct": "1.13",
+        "requested": "14.7"
+      },
+      {
+        "approved": "1.4",
+        "carrier": "Oscar Health Plan of PA",
+        "delta_pp": "-14.0",
+        "premium_level_change_vs_request_pct": "-12.13",
+        "requested": "15.4"
+      },
+      {
+        "approved": "18.8",
+        "carrier": "Partners Insurance Company Inc",
+        "delta_pp": "-1.7",
+        "premium_level_change_vs_request_pct": "-1.41",
+        "requested": "20.5"
+      },
+      {
+        "approved": "21.3",
+        "carrier": "QCC Insurance Company",
+        "delta_pp": "1.4",
+        "premium_level_change_vs_request_pct": "1.17",
+        "requested": "19.9"
+      },
+      {
+        "approved": "9.7",
+        "carrier": "UPMC Health Network Inc",
+        "delta_pp": "-2.3",
+        "premium_level_change_vs_request_pct": "-2.05",
+        "requested": "12.0"
+      },
+      {
+        "approved": "13.5",
+        "carrier": "UPMC Health Plan Inc",
+        "delta_pp": "-2.3",
+        "premium_level_change_vs_request_pct": "-1.99",
+        "requested": "15.8"
+      }
+    ],
+    "cumulative_py2026_py2027_individual_pct_illustrative": "40.90",
+    "n_approved_over_10pct": 11,
+    "n_carriers": 14,
+    "raised_after_review": [
+      "Health Partners Plans Inc",
+      "Keystone Health Plan East",
+      "QCC Insurance Company"
+    ],
+    "statewide_individual": {
+      "delta_pp": "-1.17",
+      "premium_level_vs_request_pct": "-1.00",
+      "share_of_requested_increase_removed_pct": "6.83"
+    },
+    "statewide_small_group": {
+      "delta_pp": "-1.21"
+    }
+  },
+  "C4_decomposition": {
+    "additive_high": "17.5",
+    "additive_low": "13.5",
+    "additive_mid": "15.5",
+    "approved_inside_compound_range": true,
+    "compound_high": "18.52",
+    "compound_low": "14.04",
+    "compound_mid": "16.28",
+    "pid_approved": "15.97",
+    "pid_requested": "17.14",
+    "requested_inside_compound_range": true
+  },
+  "C5_oop": {
+    "bronze_cap_130pct_usd": "15600",
+    "family_change_pct": "13.21",
+    "family_is_2x_self_only": true,
+    "self_only_change_pct": "13.21"
+  },
+  "C6_counties": {
+    "areas": 9,
+    "by_area": {
+      "1": 8,
+      "2": 3,
+      "3": 13,
+      "4": 10,
+      "5": 7,
+      "6": 10,
+      "7": 4,
+      "8": 5,
+      "9": 7
+    },
+    "total": 67,
+    "unique": 67
+  },
+  "C7_race_sum": {
+    "sum_pct": "100.3"
+  }
+}

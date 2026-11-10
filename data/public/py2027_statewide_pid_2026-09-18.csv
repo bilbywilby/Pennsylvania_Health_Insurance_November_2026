@@ -1,0 +1,9 @@
+market,metric,value,unit,source_url,accessed,tier
+individual,requested_weighted_avg,17.14,percent,https://www.pa.gov/agencies/insurance/newsroom/pennsylvania-releases-aca-2027-health-insurance-rates,2026-11-08,VERIFIED
+individual,approved_weighted_avg,15.97,percent,https://www.pa.gov/agencies/insurance/newsroom/pennsylvania-releases-aca-2027-health-insurance-rates,2026-11-08,VERIFIED
+small_group,requested_weighted_avg,11.49,percent,https://www.pa.gov/agencies/insurance/newsroom/pennsylvania-releases-aca-2027-health-insurance-rates,2026-11-08,VERIFIED
+small_group,approved_weighted_avg,10.28,percent,https://www.pa.gov/agencies/insurance/newsroom/pennsylvania-releases-aca-2027-health-insurance-rates,2026-11-08,VERIFIED
+both,premium_increases_denied,94.7,million_usd,https://www.pa.gov/agencies/insurance/newsroom/pennsylvania-releases-aca-2027-health-insurance-rates,2026-11-08,VERIFIED
+both,2025_claims_increase_vs_2024,845,million_usd,https://www.pa.gov/agencies/insurance/newsroom/pennsylvania-releases-aca-2027-health-insurance-rates,2026-11-08,VERIFIED
+both,2025_claims_increase_vs_2024_pct,13,percent,https://www.pa.gov/agencies/insurance/newsroom/pennsylvania-releases-aca-2027-health-insurance-rates,2026-11-08,VERIFIED
+individual,py2026_approved_weighted_avg,21.5,percent,https://insurancenewsnet.com/oarticle/pennie-customers-likely-to-see-increase-in-aca-costs,2026-11-08,SECONDARY

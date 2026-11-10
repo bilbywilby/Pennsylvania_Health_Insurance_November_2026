@@ -1,0 +1,68 @@
+{
+  "enrollment_series": {
+    "A_draft": {
+      "baseline": 501459,
+      "current": 417158
+    },
+    "B_peak2025_to_sep2026": {
+      "baseline": 497000,
+      "current": 417000
+    },
+    "C_oe_close_to_sep2026": {
+      "baseline": 486000,
+      "current": 417000
+    }
+  },
+  "trend_components_pct": {
+    "unit_cost": [
+      5.0,
+      6.5
+    ],
+    "utilization": [
+      2.0,
+      3.0
+    ],
+    "morbidity": [
+      1.5,
+      2.5
+    ]
+  },
+  "driver_decomposition_pct_illustrative_unsourced": {
+    "base_trend": [
+      8.0,
+      9.0
+    ],
+    "morbidity": [
+      1.5,
+      2.5
+    ],
+    "specialty_drugs": [
+      3.0,
+      4.0
+    ],
+    "reinsurance_risk_adj": [
+      1.0,
+      2.0
+    ]
+  },
+  "py2026_approved_weighted_avg_pct": 21.5,
+  "oop": {
+    "y2026": 10600,
+    "y2027": 12000,
+    "family_2026": 21200,
+    "family_2027": 24000,
+    "bronze_multiplier": 1.3
+  },
+  "race_ethnicity_pct_draft": {
+    "White": 65,
+    "Asian": 7.4,
+    "Black": 3.6,
+    "Hispanic": 3.3,
+    "non_response": 21
+  },
+  "kri": {
+    "k_target": 0.92,
+    "k_trigger": 0.85,
+    "delta_p_cross_trigger_pct": 10.0
+  }
+}

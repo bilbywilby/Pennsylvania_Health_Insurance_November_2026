@@ -1,0 +1,20 @@
+{
+  "schema": "excluded_citations are strings that must not appear outside this file and docs/source_reliability.md (see scripts/06_provenance_gate.py)",
+  "last_reviewed": "2026-11-08",
+  "verified": [
+    {"citation": "Act 146 of 2022 (Senate Bill 225)", "tier": "CARRIED", "note": "Prior authorization and external review; effective 2024-01-01. Verified in the 2026-10-09 project triage; not re-checked on 2026-11-08."},
+    {"citation": "Insurance Company Law of 1921, Article XXI (40 P.S. 991.2101-991.2193)", "tier": "CARRIED", "note": "Managed care accountability and disclosure; penalty amounts not found."},
+    {"citation": "No Surprises Act (Consolidated Appropriations Act, 2021, Div. BB, Title I)", "tier": "CARRIED", "note": "Federal; PID administers consumer complaints."},
+    {"citation": "42 U.S.C. 18063 (ACA section 1343, risk adjustment)", "tier": "VERIFIED", "note": "Confirmed 2026-11-08 against U.S. Code listings and 45 CFR 153.10."},
+    {"citation": "45 CFR 155.335(j) (re-enrollment)", "tier": "VERIFIED", "note": "Paragraph exists and is the re-enrollment provision; the tier-by-tier wording in the submitted draft was NOT verified."}
+  ],
+  "excluded_citations": [
+    {"citation": "SB 1071", "reason": "Real bill number, wrong subject: not a health insurance bill."},
+    {"citation": "Act 252-2023", "reason": "Not found in official records; implausible act number for 2023."},
+    {"citation": "§ 28-725", "reason": "Not a valid Pennsylvania Insurance Code citation format."},
+    {"citation": "§ 29-8719", "reason": "Not a valid Pennsylvania Insurance Code citation format."},
+    {"citation": "Bulletin #23-04", "reason": "Department notice concerns Medicare Supplement guaranteed issue, not billing enforcement."},
+    {"citation": "Geisinger HMO at 9.68%", "reason": "Fabricated figure; see docs/source_reliability.md."},
+    {"citation": "Flex Blue PPO", "reason": "Plan name does not exist."}
+  ]
+}

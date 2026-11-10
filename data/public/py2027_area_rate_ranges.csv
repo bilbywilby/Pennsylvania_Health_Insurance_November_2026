@@ -1,0 +1,10 @@
+rating_area,n_counties,n_entities_listed,n_with_pid_rate,approved_min_pct,approved_min_entity,approved_max_pct,approved_max_entity,entities_without_pid_rate
+1,8,5,4,9.7,"UPMC Health Network, Inc.",35.1,"Ambetter Health of Pennsylvania, Inc.","Ambetter Health Solutions of Pennsylvania, Inc."
+2,3,6,5,8.6,Geisinger Health Plan,35.1,"Ambetter Health of Pennsylvania, Inc.","Ambetter Health Solutions of Pennsylvania, Inc."
+3,13,9,8,1.4,"Oscar Health Plan of Pennsylvania, Inc.",35.1,"Ambetter Health of Pennsylvania, Inc.","Ambetter Health Solutions of Pennsylvania, Inc."
+4,10,4,3,9.7,"UPMC Health Network, Inc.",35.1,"Ambetter Health of Pennsylvania, Inc.","Ambetter Health Solutions of Pennsylvania, Inc."
+5,7,7,6,8.6,Geisinger Health Plan,35.1,"Ambetter Health of Pennsylvania, Inc.","Ambetter Health Solutions of Pennsylvania, Inc."
+6,10,10,9,1.4,"Oscar Health Plan of Pennsylvania, Inc.",35.1,"Ambetter Health of Pennsylvania, Inc.","Ambetter Health Solutions of Pennsylvania, Inc."
+7,4,8,7,1.4,"Oscar Health Plan of Pennsylvania, Inc.",35.1,"Ambetter Health of Pennsylvania, Inc.","Ambetter Health Solutions of Pennsylvania, Inc."
+8,5,8,7,1.4,"Oscar Health Plan of Pennsylvania, Inc.",35.1,"Ambetter Health of Pennsylvania, Inc.","Ambetter Health Solutions of Pennsylvania, Inc."
+9,7,8,7,8.6,Geisinger Health Plan,35.1,"Ambetter Health of Pennsylvania, Inc.","Ambetter Health Solutions of Pennsylvania, Inc."

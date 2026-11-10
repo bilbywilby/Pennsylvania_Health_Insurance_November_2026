@@ -1,0 +1,10 @@
+as_of,enrollees,description,tier,source_url,note
+2025-peak,497000,Pennie record high 2025,SECONDARY,https://insurancenewsnet.com/oarticle/pennsylvanians-are-dropping-health-coverage-through-pennie-citing-higher-plan-costs-as-the-number-one-reason,"Pennie release (2026-06-09) reprinted; 'record high in 2025 with 497,000'"
+2025-end-of-OE,496661,Close of 2025 open enrollment,SECONDARY,https://insurancenewsnet.com/oarticle/85000-pennie-customers-dropped-health-plans-as-tax-credits-shrank-and-costs-spiked,Philadelphia Inquirer via InsuranceNewsNet
+2026-02-01,486000,Close of 2026 open enrollment,SECONDARY,https://www.porh.psu.edu/pennie-enrollment-continues-to-drop/,"Also Pennie release 2026-06-09, Capital-Star 2026-06-09"
+2026-03-24,471442,Exact count per project dashboard,CARRIED,,Dashboard states 'matches independent reporting'; not re-checked this pass
+2026-06-01,443024,Pennie total enrollment,SECONDARY,https://www.haponline.org/News/HAP-News-Articles/Latest-News/millions-drop-aca-insurance-coverage-after-open-enrollment,"HAP, 2026-07-01"
+2026-07-01,431270,Pennie total enrollment,CARRIED,,Aug 2026 Status Report (PHIEA 2026a); not re-checked this pass
+2026-09,417000,"'As of September 2026, 417,000 people are enrolled' (rounded)",SECONDARY,https://insurancenewsnet.com/oarticle/legislators-pushing-for-healthcare-coverage-respond-to-new-pennie-enrollment-numbers,PA House legislators' release 2026-09-10 (States News Service); rounded to nearest thousand; primary Pennie dataset not located
+DRAFT-501459,501459,Draft 'peak PY2026 OEP headcount',UNVERIFIED,,"Not found in any retrieved source. Pennie reports 486,000 at close of 2026 OE and a 497,000 all-time peak in 2025"
+DRAFT-417158,417158,Draft 'September 2026 active enrollment' (exact),UNVERIFIED,,"Consistent with the rounded ~417,000 report but the exact figure was not located"

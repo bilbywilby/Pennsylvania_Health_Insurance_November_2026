@@ -1,0 +1,68 @@
+rating_area,county,fips,editorial_label_not_from_cms,source_tier
+1,Clarion,42031,Northwest,CARRIED
+1,Crawford,42039,Northwest,CARRIED
+1,Erie,42049,Northwest,CARRIED
+1,Forest,42053,Northwest,CARRIED
+1,McKean,42083,Northwest,CARRIED
+1,Mercer,42085,Northwest,CARRIED
+1,Venango,42121,Northwest,CARRIED
+1,Warren,42123,Northwest,CARRIED
+2,Cameron,42023,North Central,CARRIED
+2,Elk,42047,North Central,CARRIED
+2,Potter,42105,North Central,CARRIED
+3,Bradford,42015,Northeast / Poconos,CARRIED
+3,Carbon,42025,Northeast / Poconos,CARRIED
+3,Clinton,42035,Northeast / Poconos,CARRIED
+3,Lackawanna,42069,Northeast / Poconos,CARRIED
+3,Luzerne,42079,Northeast / Poconos,CARRIED
+3,Lycoming,42081,Northeast / Poconos,CARRIED
+3,Monroe,42089,Northeast / Poconos,CARRIED
+3,Pike,42103,Northeast / Poconos,CARRIED
+3,Sullivan,42113,Northeast / Poconos,CARRIED
+3,Susquehanna,42115,Northeast / Poconos,CARRIED
+3,Tioga,42117,Northeast / Poconos,CARRIED
+3,Wayne,42127,Northeast / Poconos,CARRIED
+3,Wyoming,42131,Northeast / Poconos,CARRIED
+4,Allegheny,42003,Pittsburgh metro / Western PA,CARRIED
+4,Armstrong,42005,Pittsburgh metro / Western PA,CARRIED
+4,Beaver,42007,Pittsburgh metro / Western PA,CARRIED
+4,Butler,42019,Pittsburgh metro / Western PA,CARRIED
+4,Fayette,42051,Pittsburgh metro / Western PA,CARRIED
+4,Greene,42059,Pittsburgh metro / Western PA,CARRIED
+4,Indiana,42063,Pittsburgh metro / Western PA,CARRIED
+4,Lawrence,42073,Pittsburgh metro / Western PA,CARRIED
+4,Washington,42125,Pittsburgh metro / Western PA,CARRIED
+4,Westmoreland,42129,Pittsburgh metro / Western PA,CARRIED
+5,Bedford,42009,Alleghenies / Central West,CARRIED
+5,Blair,42013,Alleghenies / Central West,CARRIED
+5,Cambria,42021,Alleghenies / Central West,CARRIED
+5,Clearfield,42033,Alleghenies / Central West,CARRIED
+5,Huntingdon,42061,Alleghenies / Central West,CARRIED
+5,Jefferson,42065,Alleghenies / Central West,CARRIED
+5,Somerset,42111,Alleghenies / Central West,CARRIED
+6,Centre,42027,Susquehanna Valley / Lehigh Valley / Centre,CARRIED
+6,Columbia,42037,Susquehanna Valley / Lehigh Valley / Centre,CARRIED
+6,Lehigh,42077,Susquehanna Valley / Lehigh Valley / Centre,CARRIED
+6,Mifflin,42087,Susquehanna Valley / Lehigh Valley / Centre,CARRIED
+6,Montour,42093,Susquehanna Valley / Lehigh Valley / Centre,CARRIED
+6,Northampton,42095,Susquehanna Valley / Lehigh Valley / Centre,CARRIED
+6,Northumberland,42097,Susquehanna Valley / Lehigh Valley / Centre,CARRIED
+6,Schuylkill,42107,Susquehanna Valley / Lehigh Valley / Centre,CARRIED
+6,Snyder,42109,Susquehanna Valley / Lehigh Valley / Centre,CARRIED
+6,Union,42119,Susquehanna Valley / Lehigh Valley / Centre,CARRIED
+7,Adams,42001,"South Central (Adams, Berks, Lancaster, York)",CARRIED
+7,Berks,42011,"South Central (Adams, Berks, Lancaster, York)",CARRIED
+7,Lancaster,42071,"South Central (Adams, Berks, Lancaster, York)",CARRIED
+7,York,42133,"South Central (Adams, Berks, Lancaster, York)",CARRIED
+8,Bucks,42017,Philadelphia metro,CARRIED
+8,Chester,42029,Philadelphia metro,CARRIED
+8,Delaware,42045,Philadelphia metro,CARRIED
+8,Montgomery,42091,Philadelphia metro,CARRIED
+8,Philadelphia,42101,Philadelphia metro,CARRIED
+9,Cumberland,42041,Cumberland Valley / Capital region,CARRIED
+9,Dauphin,42043,Cumberland Valley / Capital region,CARRIED
+9,Franklin,42055,Cumberland Valley / Capital region,CARRIED
+9,Fulton,42057,Cumberland Valley / Capital region,CARRIED
+9,Juniata,42067,Cumberland Valley / Capital region,CARRIED
+9,Lebanon,42075,Cumberland Valley / Capital region,CARRIED
+9,Perry,42099,Cumberland Valley / Capital region,CARRIED
