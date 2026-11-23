@@ -64,5 +64,18 @@
     "k_target": 0.92,
     "k_trigger": 0.85,
     "delta_p_cross_trigger_pct": 10.0
+  },
+  "metal_tier_projection_pct_draft": {
+    "Catastrophic": 1.5,
+    "Bronze": 47.8,
+    "Silver Standard": 13.0,
+    "Silver CSR": 21.5,
+    "Gold": 15.4,
+    "Platinum": 0.8
+  },
+  "csr_draft": {
+    "reported_share_pct": 23,
+    "reported_count": 115336,
+    "reference_enrollment": 501459
   }
 }

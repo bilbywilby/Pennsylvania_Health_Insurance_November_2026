@@ -1,5 +1,7 @@
-#!/usr/bin/env bash
+#!/bin/sh
 # push_to_github.sh - validate, commit and push this packet. Never cleans or resets.
+# pipefail needs bash; Termux `sh` is dash, so re-exec under bash.
+if [ -z "${BASH_VERSION:-}" ]; then exec bash "$0" "$@"; fi
 set -euo pipefail
 REMOTE="https://github.com/bilbywilby/Pennsylvania_Health_Insurance_November_2026.git"
 cd "$(dirname "$0")/.."

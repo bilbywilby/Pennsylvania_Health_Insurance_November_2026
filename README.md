@@ -1,6 +1,6 @@
 # Pennsylvania Health Insurance, November 2026 audit packet
 
-Public-interest audit of Pennsylvania's ACA individual and small-group markets for Plan Year 2027. Status date **2026-11-08**. Repository: <https://github.com/bilbywilby/Pennsylvania_Health_Insurance_November_2026>
+Public-interest audit of Pennsylvania's ACA individual and small-group markets for Plan Year 2027. Status date **2026-11-08** | Version **3.1.0-beta.1**. Repository: <https://github.com/bilbywilby/Pennsylvania_Health_Insurance_November_2026>
 
 ## Headline findings (details and sources in the report)
 
@@ -16,13 +16,19 @@ Public-interest audit of Pennsylvania's ACA individual and small-group markets f
 | `report/PA_ACA_Forensic_Audit_PY2027_November_2026.md` | APA 7 report with calculation subsections C1-C7 |
 | `report/REVIEW_OF_SUBMITTED_DRAFT.md` | Proofread and correction log |
 | `report/rating_area_summaries.md` | Nine per-area tables (generated) |
+| `report/one_pagers/rating_area_1.md` ... `_9.md` | One-page consumer snapshots per rating area (generated) |
+| `HANDOVER.json` | Current project handover (generated from the packet; do not hand-edit) |
+| `VERSION` | Release version (single source) |
 | `templates/consumer_open_enrollment_2027.md` | Patient-facing checklist |
 | `data/public/` | Crosswalk (single source of truth), PID rates, footprints, enrollment, key dates, limits, calc inputs |
 | `data/claims_ledger.csv` | Every claim from the draft with an evidence tier |
 | `data/statutes_2026.json`, `docs/source_reliability.md` | Verified and excluded citations; quarantined sources |
-| `audit/` | Monthly audit JSON, conflicts register, calculation results |
+| `audit/` | Monthly audit JSON, conflicts register, calculation results and schedule, crosswalk test-log template |
 | `scripts/` | `calc_audit.py`, `build_area_tables.py`, `validate_packet.py`, `hash_manifest.py`, `06_provenance_gate.py`, `push_to_github.sh` |
 | `tests/test_packet.py` | Unit tests (stdlib `unittest`) |
+| `docs/SSOT.md` | Single-source-of-truth map: which file is authoritative for which fact |
+| `.github/workflows/validate.yml` | CI: regenerate, validate, gate, test on every push |
+| `.gitattributes` | Forces LF line endings (Android/Windows safe) |
 
 ## Evidence tiers
 
@@ -32,7 +38,8 @@ VERIFIED (primary read this pass) / SECONDARY (credible reporting) / CARRIED (ea
 
 ```bash
 python3 scripts/calc_audit.py          # recomputes audit/calc_results.json
-python3 scripts/build_area_tables.py   # regenerates area tables
+python3 scripts/build_area_tables.py   # regenerates area tables and one-pagers
+python3 scripts/generate_handover.py   # regenerates HANDOVER.json
 python3 scripts/validate_packet.py     # structure, tiers, report/number consistency
 python3 scripts/06_provenance_gate.py  # stray-paste / duplicate-crosswalk / excluded-citation gate
 python3 -m unittest discover -s tests -v
@@ -42,7 +49,7 @@ python3 scripts/hash_manifest.py       # writes MANIFEST.sha256
 ## Publish
 
 ```bash
-sh scripts/push_to_github.sh
+bash scripts/push_to_github.sh
 ```
 
 The script validates first and does not use `git clean` or `git reset`. If your global hooks path still emits the known `grep: Invalid range end` error, fix that first (see the handover notes); the push script does not bypass hooks.

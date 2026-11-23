@@ -50,3 +50,26 @@ Reviewed 2026-11-08: the pasted draft (2.0_FINAL_VERIFIED), the uploaded `PA_ACA
 - No SERFF filing or actuarial memorandum was opened.
 - The CMS 2027 cost-sharing guidance PDF was not fetched (cited through secondary sources).
 - The enhanced-credit contribution caps (L13) were not re-sourced; the correction rests on general knowledge and should be confirmed before publication.
+
+## Second batch (received 2026-11-11): three pasted items
+
+### "Working Draft for Reconciliation" (editorial source: usable)
+
+- **Matches PID.** Requested 17.14% and approved 15.97% individual, 11.49% and 10.28% small group; it correctly says the "approximately 16.0%" figure is the approved rate (L48).
+- **Correct on §1343 / 42 U.S.C. 18063** (L53) and on the trend range 8.71% to 12.44%.
+- **Arithmetic slips:** it prints the low-case product as 0.087113 (should be 0.087065) and the midpoint as 10.58% (10.57% unrounded) (L46, L47).
+- **115,336 CSR enrollees is 23% x 501,459 = 115,335.57**, so it is derived, not an independent count (L50, calculation C9). The plan-mix shares and the 46,000 rural gap have no source (L49, L51).
+- **Adopted into the beta:** acronyms and definitions, the regulatory table, and Appendices A to D (here C to F).
+
+### "Geographic Rating Area Summaries" (quarantined: do not use)
+
+- Rating-area names and counties are wrong for Areas 2, 3, 4, 5, 6, 7 and 9 (for example it calls Area 2 "Pittsburgh"; Pittsburgh is Area 4, and Area 2 is Cameron, Elk and Potter) (L55).
+- Three carrier rates are wrong: Keystone Health Plan East 19.7% (PID 16.0%), Jefferson/Partners 18.4% (18.8%), Highmark Inc 10.7% (14.5%) (L56).
+- It says rating-area premium differences reflect population morbidity (L57) and gives a risk-adjustment "transfer by rating area" formula (L58); both are wrong.
+- Its per-area ranges omit carriers (L59). Replaced by `report/rating_area_summaries.md` and the nine one-pagers.
+
+### "Repository reconciliation" overview (not used)
+
+- It says the remote contains "token/credential dumps". The owner's `git grep` of origin/main for token, private-key and AWS-key patterns returned nothing, so the claim is unsupported (L60). That is not an all-clear: review the removed files before deciding anything about history.
+- Its file checklist matches this packet's layout, which is the only useful part.
+

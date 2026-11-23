@@ -66,17 +66,48 @@ class TestCalculations(unittest.TestCase):
         self.assertEqual(c["by_area"], {"1": 8, "2": 3, "3": 13, "4": 10, "5": 7, "6": 10, "7": 4, "8": 5, "9": 7})
         self.assertEqual(calc.c7_race(self.inp)["sum_pct"], "100.3")
 
+    def test_metal_mix_and_csr_circularity(self):
+        self.assertEqual(calc.c8_metal(self.inp)["sum_pct"], "100.0")
+        c9 = calc.c9_csr(self.inp)
+        self.assertEqual((c9["product"], c9["product_rounded"], c9["difference"]), ("115335.57", "115336", "0.43"))
+        self.assertTrue(c9["matches_derivation_within_1"])
+
     def test_pid_rows_are_internally_consistent(self):
         for c in calc.c3_rate_review(self.inp)["carriers"]:
             self.assertEqual(D(c["approved"]) - D(c["requested"]), D(c["delta_pp"]))
 
 
 class TestValidator(unittest.TestCase):
+    def test_repo_extras_do_not_break_handover_check(self):
+        import shutil
+        import tempfile
+        tmp = Path(tempfile.mkdtemp())
+        dst = tmp / "p"
+        shutil.copytree(str(ROOT), str(dst), ignore=shutil.ignore_patterns(".git", "__pycache__"))
+        (dst / "LICENSE").write_text("MIT")
+        (dst / ".github" / "actions-scripts").mkdir(parents=True, exist_ok=True)
+        (dst / ".github" / "actions-scripts" / "x.mjs").write_text("x")
+        old = validate.ROOT
+        validate.ROOT = dst
+        validate.FAILS.clear()
+        try:
+            validate.check_quarantine_and_handover()
+            self.assertEqual(validate.FAILS, [])
+            (dst / "docs" / "new_unlisted.md").write_text("x")
+            validate.check_quarantine_and_handover()
+            self.assertTrue(any("stale" in f for f in validate.FAILS))
+        finally:
+            validate.ROOT = old
+            validate.FAILS.clear()
+            shutil.rmtree(str(tmp), ignore_errors=True)
+
     def test_validator_passes_on_packet(self):
         calc.main()
         validate.FAILS.clear()
         for fn in (validate.check_crosswalk, validate.check_tiers_and_urls, validate.check_rates,
-                   validate.check_report_numbers, validate.check_json):
+                   validate.check_report_numbers, validate.check_ssot_map, validate.check_version,
+                   validate.check_ledger_and_inventory_ids, validate.check_one_pagers_and_schedule,
+                   validate.check_quarantine_and_handover, validate.check_json):
             fn()
         self.assertEqual(validate.FAILS, [])
 

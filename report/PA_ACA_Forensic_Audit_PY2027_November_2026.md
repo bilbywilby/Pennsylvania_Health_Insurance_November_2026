@@ -2,7 +2,9 @@
 
 **Ez_Insurance Pennsylvania Health Insurance Public Information Campaign**
 
-November 8, 2026 | Version 3.0 (supersedes draft 2.0_FINAL_VERIFIED) | Repository: <https://github.com/bilbywilby/Pennsylvania_Health_Insurance_November_2026>
+Status date November 8, 2026 | Beta compiled November 11, 2026 | Version 3.1.0-beta.1 (supersedes 3.0.1 and draft 2.0_FINAL_VERIFIED) | Repository: <https://github.com/bilbywilby/Pennsylvania_Health_Insurance_November_2026>
+
+**Status: BETA.** Items tagged UNVERIFIED, CARRIED or CONTRADICTED are not findings and must not be quoted as such.
 
 ---
 
@@ -13,6 +15,28 @@ This report updates the Plan Year 2027 (PY2027) audit of Pennsylvania's ACA indi
 *Keywords:* Pennsylvania, Pennie, ACA marketplace, rate review, rating areas, open enrollment, risk pool
 
 ---
+
+## Acronyms and definitions
+
+| Term | Meaning |
+|---|---|
+| ACA | Affordable Care Act |
+| APTC | advance premium tax credit |
+| ARPA, IRA | American Rescue Plan Act; Inflation Reduction Act |
+| CMS | Centers for Medicare & Medicaid Services |
+| CSR | cost-sharing reduction |
+| EHB | essential health benefits |
+| HHS | U.S. Department of Health and Human Services |
+| KRI | key risk indicator |
+| MOOP | maximum out-of-pocket limit (maximum annual limitation on cost sharing) |
+| OE | open enrollment |
+| PID | Pennsylvania Insurance Department |
+| PY | plan year |
+| SERFF | System for Electronic Rates & Forms Filing |
+| URRT | Unified Rate Review Template |
+| Pennie | Pennsylvania's state-based exchange (launched for PY2021; launch release not opened this pass, ledger L52) |
+
+The submitted drafts also use MPMS and USP. In CMS plan-certification usage they stand for Marketplace Plan Management System and United States Pharmacopeia (drug category and class), but neither was confirmed against the audit package's data dictionary, so neither appears in a finding (ledger L54).
 
 ## 1. Introduction and scope
 
@@ -110,7 +134,22 @@ For PY2027 the maximum annual cost-sharing limit is $12,000 self-only and $24,00
 
 ### 3.7 Single risk pool and rate-review framework (descriptive)
 
-Issuers file through SERFF with a URRT and an actuarial memorandum, and PID reviews requests against supporting data ([PID, 2026a](https://www.pa.gov/agencies/insurance/newsroom/pennsylvania-releases-aca-2027-health-insurance-rates)). Single risk pool, geographic rating, actuarial value and risk adjustment requirements are federal standards (45 CFR §§ 156.80, 154.215, 156.135 and Part 153; CARRIED, [eCFR Part 153](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-B/part-153)). Risk adjustment is ACA section 1343 ([42 U.S.C. § 18063](https://www.govinfo.gov/link/uscode/42/18063); VERIFIED). The earlier draft cited "Section 1340"; that is incorrect and any edit to 1340 should be reverted. This packet does not assert that any filing is compliant, because no filing exhibits were audited.
+Issuers file through SERFF with a URRT and an actuarial memorandum, and PID reviews requests against supporting data ([PID, 2026a](https://www.pa.gov/agencies/insurance/newsroom/pennsylvania-releases-aca-2027-health-insurance-rates)). The provisions below frame the review. This packet does not assert that any filing is compliant, because no filing exhibits were audited.
+
+| Provision | Governs | Link | Tier |
+|---|---|---|---|
+| 45 CFR § 156.80 | Single risk pool and index rate | [eCFR](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-B/part-156/subpart-A/section-156.80) | CARRIED |
+| 45 CFR § 147.102 | Permitted rating factors: family size, rating area, age, tobacco use | [eCFR](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-B/part-147/section-147.102) | CARRIED |
+| 45 CFR § 154.215 | Rate filing justification | [eCFR](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-B/part-154/subpart-B/section-154.215) | CARRIED |
+| 45 CFR § 156.135 | Actuarial value calculation | [eCFR](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-B/part-156/subpart-B/section-156.135) | CARRIED |
+| 45 CFR Part 153 | Risk adjustment and reinsurance | [eCFR](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-B/part-153) | CARRIED |
+| 42 U.S.C. § 18063 (ACA § 1343) | Risk adjustment statute | [GovInfo](https://www.govinfo.gov/link/uscode/42/18063) | VERIFIED |
+| 45 CFR § 155.335(j) | Exchange re-enrollment | [LII](https://www.law.cornell.edu/cfr/text/45/155.335) | VERIFIED (paragraph exists) |
+| 45 CFR Part 149 | No Surprises Act requirements | [eCFR](https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-B/part-149) | CARRIED |
+| Pub. L. 117-2 (ARPA) | Enhanced premium tax credits, 2021-2022 | [GovInfo](https://www.govinfo.gov/app/details/PLAW-117publ2) | CARRIED |
+| Pub. L. 117-169 (IRA) | Extension of enhanced credits through 2025 | [GovInfo](https://www.govinfo.gov/app/details/PLAW-117publ169) | CARRIED |
+
+Risk adjustment is ACA section 1343. Earlier drafts cited "Section 1340", which is incorrect, and any edit to 1340 should be reverted. HHS risk adjustment transfers are computed between issuers within a state market, not between rating areas (ledger L58).
 
 ### 3.8 Plan taxonomy (reference)
 
@@ -123,9 +162,13 @@ Issuers file through SERFF with a URRT and an actuarial memorandum, and PID revi
 
 *Note.* General definitions, unsourced in this packet; the drug-tier taxonomy in the earlier draft is omitted as non-audit content.
 
+### 3.9 Reported plan-mix and CSR figures (UNVERIFIED)
+
+The submitted drafts report a projected PY2027 plan mix of Catastrophic 1.5%, Bronze 47.8%, Silver Standard 13.0%, Silver CSR 21.5%, Gold 15.4% and Platinum 0.8%, about 115,336 CSR enrollees (about 23% of enrollment) and a 46,000-person rural CSR equity gap. None has a source (ledger L49 to L51). The shares sum to 100.0 (calculation C8), and the CSR count equals 23% of the unverified 501,459 peak (calculation C9), so the count cannot corroborate the percentage. Keep metal level distinct from CSR variant (the income-based CSR variants are Silver plans). Before any of these figures is presented as a finding, document its denominator, date and population (eligible enrollees, eligible non-enrollees or another measure).
+
 ## 4. Calculations
 
-Each subsection states why the calculation is done, how, and what limits its use. All results are reproduced by `python3 scripts/calc_audit.py` and checked by `tests/test_packet.py`.
+Each subsection states why the calculation is done, how, and what limits its use. All results are reproduced by `python3 scripts/calc_audit.py` (which also writes the machine-readable `audit/calc_schedule.csv`) and checked by `tests/test_packet.py`.
 
 ### C1. Composite medical cost trend (corrects the earlier draft)
 
@@ -199,6 +242,22 @@ PID's requested (17.14%) and approved (15.97%) averages fall inside both ranges,
 
 *How.* 65 + 7.4 + 3.6 + 3.3 + 21 = **100.3**. The excess of 0.3 points is not explained by the stated reason, and the figures have no source (L31). Hispanic ethnicity may overlap race categories, which would produce a sum above 100, but unrounded source values are needed to confirm this.
 
+### C8. Plan-mix sum check
+
+*Why.* A sanity check on the projected plan mix in section 3.9.
+
+*How.* 1.5 + 47.8 + 13.0 + 21.5 + 15.4 + 0.8 = **100.0**.
+
+*Limits.* Arithmetic only. The six shares have no source (L49).
+
+### C9. CSR enrollee count versus 23% of the peak
+
+*Why.* To test whether the reported 115,336 CSR enrollees is independent of the 23% share.
+
+*How.* 0.23 x 501,459 = **115,335.57**, which rounds to 115,336; the reported count differs by 0.43, and 115,336 / 501,459 = 23.00%.
+
+*Reading.* The count reproduces the percentage times an unverified base, so the two are one number stated twice, not two pieces of evidence. Locate Pennie's own CSR counts before relying on either (conflict X13).
+
 ## 5. Key risk indicators (reconstructed definitions)
 
 The formula text for these indicators was blank in the submitted file (L37), so these are reconstructions to be confirmed.
@@ -225,6 +284,7 @@ The formula text for these indicators was blank in the submitted file (L37), so 
 - Several enrollment figures are rounded or reprinted; Pennie's primary dataset was not located.
 - Items marked CARRIED were not re-checked on November 8, 2026.
 - PID figures are weighted averages; individual premiums depend on age, county, plan and subsidy.
+- Beta status: no crosswalk test cases have been run (`audit/crosswalk_test_log_template.csv` is a header only), and the one-pagers are markdown, not PDF.
 
 ## References
 
@@ -280,3 +340,19 @@ WHYY. (2026b). *Pa., N.J., Del. to kick off ACA open enrollment on Nov. 1 for 20
 ## Appendix B. Items withdrawn from the earlier draft
 
 See `data/claims_ledger.csv` (45 rows) and `report/REVIEW_OF_SUBMITTED_DRAFT.md`. Items include the 501,459 and 417,158 enrollment figures, the "requested 16.0%" label, the historical PY2017 to PY2025 rate table, the demographic table, the six-tier crosswalk hierarchy, "Section 1340", the $9,200 cap and all "fully compliant" audit outcomes.
+
+## Appendix C. Calculation schedule
+
+`audit/calc_schedule.csv` (generated) lists every calculation with its formula, inputs, result and input tier.
+
+## Appendix D. Source inventory
+
+`data/public/source_inventory.csv` lists each source with issuer, date, direct link, link level (pinpoint, section, article or landing page), tier and the claim it supports.
+
+## Appendix E. Reconciliation log
+
+`audit/conflicts_register.csv` records each disagreement between sources with its status and resolution or next step.
+
+## Appendix F. Plan ID crosswalk test log
+
+`audit/crosswalk_test_log_template.csv` is a header only. No crosswalk test cases have been run, so none are reported; the crosswalk must not be described as verified logic until the log is populated against the issuer's mapping output.

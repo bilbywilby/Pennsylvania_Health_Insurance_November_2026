@@ -25,6 +25,8 @@ Always write the plan year and the word requested or approved next to every rate
 ## Quarantined documents (standing quarantine)
 
 - "Cross-Sectional Metadata Analysis" (RTF and PDF; project file `PA_Health_Insurance_Audit_Analysis.pdf`): contains county-to-rating-area mappings that disagree with CMS (for example, it places Allegheny in Rating Area 1 and lists 17 counties there) and invented plan names. Its rating-area tables, carrier tables and "Works cited" are not used anywhere in this packet.
+- "Geographic Rating Area Summaries: Pennsylvania PY2027 ACA Market Analysis" (received 2026-11-11): rating-area names and county assignments contradict the CMS-based crosswalk for Areas 2, 3, 4, 5, 6, 7 and 9; three carrier rates are wrong; the morbidity statement and the per-area risk-adjustment formula are incorrect (ledger L55-L59). Quarantined; superseded by `report/rating_area_summaries.md`.
+- "Working Draft for Reconciliation" (received 2026-11-11): usable as an editorial source. Its PID figures match; its 0.087113 intermediate, 10.58% midpoint and CSR count are corrected in the ledger (L46-L54).
 - `stage2-analysis-dashboard.jsx` inherits carrier-to-area assignments from that document; do not publish its per-area averages.
 
 ## Sources that are not primary

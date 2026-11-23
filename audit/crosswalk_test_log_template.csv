@@ -1,0 +1,1 @@
+case_id,source_plan_id,source_issuer,source_product,source_metal,source_service_area,expected_destination,actual_destination,rule_applied,result,exception_code,reviewer,run_date

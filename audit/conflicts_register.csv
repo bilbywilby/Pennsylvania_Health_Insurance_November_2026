@@ -10,3 +10,6 @@ X08,Partners Insurance Company PY2026,Status report lists both -10.1% and 20.5% 
 X09,Ambetter Health Solutions of Pennsylvania,Listed in all nine area reports,Not in PID's 2026-09-18 list of 14 individual-market carriers,OPEN,Check PID filing search; may be a companion or retired filing.
 X10,Number of individual carriers,'At least 13' (area reports),PID release lists 14 individual-market entities,RESOLVED,Use 14 entities (some share a parent).
 X11,Out-of-pocket cap,"Draft: $9,200 'per 2026'","2026: $10,600; 2027: $12,000",RESOLVED,Use 2027 values for PY2027.
+X12,Rating-area names and counties,"Rating Area Summaries (batch 2): Area 2 Pittsburgh, Area 3 Altoona, etc.","CMS-based crosswalk: Area 4 Pittsburgh, Area 5 Altoona, etc.",RESOLVED,Crosswalk wins; the batch-2 summary is quarantined.
+X13,CSR enrollee count,"Draft: 115,336 enrollees (23%)","23% x 501,459 = 115,335.57",OPEN,"Treat as derived, not independent; locate Pennie CSR counts."
+X14,Highmark Inc approved rate,Rating Area Summaries (batch 2): 10.7%,PID: 14.5% (10.7% is Geisinger Quality Options),RESOLVED,PID release controls.

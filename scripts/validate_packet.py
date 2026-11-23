@@ -98,6 +98,7 @@ def check_report_numbers():
         calc["C5_oop"]["self_only_change_pct"] + "%", "$" + f"{int(calc['C5_oop']['bronze_cap_130pct_usd']):,}",
         calc["C7_race_sum"]["sum_pct"], "15.97", "17.14", "1343", "$12,000", "$24,000",
         calc["C4_decomposition"]["compound_low"] + "%", calc["C4_decomposition"]["compound_high"] + "%",
+        f"{D(calc['C9_csr']['product']):,}", "C8.", "C9.",
     ]
     for s in must:
         if s not in rep:
@@ -116,6 +117,67 @@ def check_report_numbers():
         fail("report still labels a rate '(Requested)' in a table header")
 
 
+def check_ssot_map():
+    doc = (ROOT / "docs" / "SSOT.md").read_text()
+    for rel in sorted(set(re.findall(r"`((?:data|report|audit|docs|scripts|templates)/[^`\s]+)`", doc))):
+        if not (ROOT / rel).exists():
+            fail(f"docs/SSOT.md references missing file {rel}")
+
+
+def _files():
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import generate_handover
+    return generate_handover.managed_files(ROOT)
+
+
+def check_version():
+    v = (ROOT / "VERSION").read_text().strip()
+    for rel in ("README.md", "report/PA_ACA_Forensic_Audit_PY2027_November_2026.md"):
+        if v not in (ROOT / rel).read_text():
+            fail(f"{rel} does not mention version {v}")
+    m = re.search(r"^## (\S+)", (ROOT / "CHANGELOG.md").read_text(), re.M)
+    if not m or m.group(1) != v:
+        fail(f"CHANGELOG top heading {m.group(1) if m else None!r} != VERSION {v!r}")
+    if json.loads((ROOT / "HANDOVER.json").read_text())["project"]["version"] != v:
+        fail("HANDOVER.json version != VERSION (run scripts/generate_handover.py)")
+
+
+def check_ledger_and_inventory_ids():
+    for rel, prefix in (("data/claims_ledger.csv", "L"), ("data/public/source_inventory.csv", "S")):
+        ids = [r["id"] for r in rows(ROOT / rel)]
+        want = [f"{prefix}{i:02d}" for i in range(1, len(ids) + 1)]
+        if ids != want:
+            fail(f"{rel}: ids are not contiguous and unique ({ids[:3]}...)")
+
+
+def check_one_pagers_and_schedule():
+    for a in range(1, 10):
+        p = ROOT / "report" / "one_pagers" / f"rating_area_{a}.md"
+        if not p.exists() or "Approved range across carriers" not in p.read_text():
+            fail(f"one-pager for rating area {a} missing or incomplete")
+    sched = rows(ROOT / "audit" / "calc_schedule.csv")
+    if len(sched) < 16 or not any(r["id"] == "C9" for r in sched) or any(not r["result"] for r in sched):
+        fail("audit/calc_schedule.csv is incomplete (run scripts/calc_audit.py)")
+    hdr = (ROOT / "audit" / "crosswalk_test_log_template.csv").read_text().splitlines()[0]
+    for col in ("case_id", "source_plan_id", "expected_destination", "actual_destination", "rule_applied", "result"):
+        if col not in hdr:
+            fail(f"crosswalk test-log template missing column {col}")
+
+
+def check_quarantine_and_handover():
+    rel = (ROOT / "docs" / "source_reliability.md").read_text()
+    for name in ("Cross-Sectional Metadata Analysis", "Geographic Rating Area Summaries"):
+        if name not in rel:
+            fail(f"docs/source_reliability.md does not quarantine {name!r}")
+    h = json.loads((ROOT / "HANDOVER.json").read_text())
+    if h["project"]["secrets_stored_in_file"] is not False:
+        fail("HANDOVER.json must declare no secrets")
+    if sorted(h["file_inventory"]) != _files():
+        fail("HANDOVER.json file_inventory is stale (run scripts/generate_handover.py, then scripts/hash_manifest.py)")
+    if h["current_state"]["claims_ledger_rows"] != len(rows(ROOT / "data" / "claims_ledger.csv")):
+        fail("HANDOVER.json ledger count is stale")
+
+
 def check_json():
     for p in (ROOT / "audit" / "monthly_audit_2026-11.json", ROOT / "data" / "statutes_2026.json",
               PUB / "calc_inputs.json", ROOT / "audit" / "calc_results.json"):
@@ -126,7 +188,7 @@ def check_json():
 
 
 def main():
-    for fn in (check_crosswalk, check_tiers_and_urls, check_rates, check_report_numbers, check_json):
+    for fn in (check_crosswalk, check_tiers_and_urls, check_rates, check_report_numbers, check_ssot_map, check_version, check_ledger_and_inventory_ids, check_one_pagers_and_schedule, check_quarantine_and_handover, check_json):
         try:
             fn()
         except Exception as e:  # noqa: BLE001

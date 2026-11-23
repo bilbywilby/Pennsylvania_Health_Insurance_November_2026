@@ -16,7 +16,7 @@
 | UPMC Health Network, Inc. | 12.0 | 9.7 |
 
 **Approved range:** 9.7% (UPMC Health Network, Inc.) to 35.1% (Ambetter Health of Pennsylvania, Inc.).
-**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc..
+**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc.
 
 ## Rating Area 2 (3 counties)
 
@@ -33,7 +33,7 @@
 | Geisinger Health Plan | 10.5 | 8.6 |
 
 **Approved range:** 8.6% (Geisinger Health Plan) to 35.1% (Ambetter Health of Pennsylvania, Inc.).
-**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc..
+**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc.
 
 ## Rating Area 3 (13 counties)
 
@@ -53,7 +53,7 @@
 | Oscar Health Plan of Pennsylvania, Inc. | 15.4 | 1.4 |
 
 **Approved range:** 1.4% (Oscar Health Plan of Pennsylvania, Inc.) to 35.1% (Ambetter Health of Pennsylvania, Inc.).
-**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc..
+**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc.
 
 ## Rating Area 4 (10 counties)
 
@@ -68,7 +68,7 @@
 | UPMC Health Network, Inc. | 12.0 | 9.7 |
 
 **Approved range:** 9.7% (UPMC Health Network, Inc.) to 35.1% (Ambetter Health of Pennsylvania, Inc.).
-**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc..
+**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc.
 
 ## Rating Area 5 (7 counties)
 
@@ -86,7 +86,7 @@
 | Geisinger Health Plan | 10.5 | 8.6 |
 
 **Approved range:** 8.6% (Geisinger Health Plan) to 35.1% (Ambetter Health of Pennsylvania, Inc.).
-**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc..
+**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc.
 
 ## Rating Area 6 (10 counties)
 
@@ -107,7 +107,7 @@
 | Oscar Health Plan of Pennsylvania, Inc. | 15.4 | 1.4 |
 
 **Approved range:** 1.4% (Oscar Health Plan of Pennsylvania, Inc.) to 35.1% (Ambetter Health of Pennsylvania, Inc.).
-**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc..
+**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc.
 
 ## Rating Area 7 (4 counties)
 
@@ -126,7 +126,7 @@
 | Oscar Health Plan of Pennsylvania, Inc. | 15.4 | 1.4 |
 
 **Approved range:** 1.4% (Oscar Health Plan of Pennsylvania, Inc.) to 35.1% (Ambetter Health of Pennsylvania, Inc.).
-**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc..
+**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc.
 
 ## Rating Area 8 (5 counties)
 
@@ -145,7 +145,7 @@
 | Oscar Health Plan of Pennsylvania, Inc. | 15.4 | 1.4 |
 
 **Approved range:** 1.4% (Oscar Health Plan of Pennsylvania, Inc.) to 35.1% (Ambetter Health of Pennsylvania, Inc.).
-**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc..
+**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc.
 
 ## Rating Area 9 (7 counties)
 
@@ -164,5 +164,5 @@
 | Geisinger Health Plan | 10.5 | 8.6 |
 
 **Approved range:** 8.6% (Geisinger Health Plan) to 35.1% (Ambetter Health of Pennsylvania, Inc.).
-**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc..
+**No PID figure in the 2026-09-18 release for:** Ambetter Health Solutions of Pennsylvania, Inc.
 

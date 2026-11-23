@@ -1,0 +1,17 @@
+id,calculation,formula,inputs,result,input_tier,note
+C1-low,Composite medical cost trend (low),(1+c)(1+u)(1+m)-1,"c,u,m = 5.0%, 2.0%, 1.5%",8.71%,UNVERIFIED,assumed component ranges from the submitted draft; additive 8.50%; cost x utilization only 7.10%
+C1-high,Composite medical cost trend (high),(1+c)(1+u)(1+m)-1,"c,u,m = 6.5%, 3.0%, 2.5%",12.44%,UNVERIFIED,assumed component ranges from the submitted draft; additive 12.00%; cost x utilization only 9.70%
+C2-A,Enrollment attrition,net=base-current; pct=net/base; K=current/base,"base=501459, current=417158",net=84301; 16.81%; K=0.8319,UNVERIFIED,K<0.85 trigger: True
+C2-B,Enrollment attrition,net=base-current; pct=net/base; K=current/base,"base=497000, current=417000",net=80000; 16.10%; K=0.8390,SECONDARY,K<0.85 trigger: True
+C2-C,Enrollment attrition,net=base-current; pct=net/base; K=current/base,"base=486000, current=417000",net=69000; 14.20%; K=0.8580,SECONDARY,K<0.85 trigger: False
+C3-statewide,"Requested to approved, individual market",a-r; (1+a)/(1+r)-1; (r-a)/r,"r=17.14%, a=15.97%",-1.17 pp; -1.00%; 6.83%,VERIFIED,PID 2026-09-18
+C3-over10,Carriers approved above 10%,count(approved>10),14 PID carriers,11 of 14,VERIFIED,
+C3-cumulative,Cumulative PY2026 and PY2027 (illustrative),(1+0.215)(1+0.1597)-1,"21.5%, 15.97%",40.90%,SECONDARY,"different enrollment mixes; gross, not net"
+C4-additive,"Driver scenario, additive",sum of ranges,"8-9, 1.5-2.5, 3-4, 1-2 (%)",13.5% to 17.5% (mid 15.5%),UNVERIFIED,illustrative
+C4-compound,"Driver scenario, compounded",product of (1+x)-1,same ranges,14.04% to 18.52% (mid 16.28%),UNVERIFIED,illustrative
+C5-change,Cost-sharing limit change 2026 to 2027,12000/10600-1,"10,600 and 12,000 USD",13.21%,SECONDARY,"family 21,200 to 24,000 gives the same %"
+C5-bronze,Bronze cap at 130%,1.30 x 12000,"12,000 USD",15600 USD,SECONDARY,
+C6,County total,sum of counties by area,crosswalk JSON,"67 counties, 67 unique, 9 areas",CARRIED,
+C7,Demographic percentage sum,sum of categories,"65, 7.4, 3.6, 3.3, 21",100.3,UNVERIFIED,draft table; no source
+C8,Plan-mix sum,sum of tier shares,"1.5, 47.8, 13.0, 21.5, 15.4, 0.8",100.0,UNVERIFIED,arithmetic only; shares unsourced
+C9,"CSR enrollee count versus 23% of 501,459",0.23 x 501459,"23%, 501,459, reported 115,336",115335.57 (rounds to 115336; diff 0.43),UNVERIFIED,"count equals the percentage times an unverified base, so it is not independent"

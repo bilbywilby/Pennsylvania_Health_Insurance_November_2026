@@ -221,5 +221,18 @@
   },
   "C7_race_sum": {
     "sum_pct": "100.3"
+  },
+  "C8_metal": {
+    "is_100": true,
+    "n_tiers": 6,
+    "sum_pct": "100.0"
+  },
+  "C9_csr": {
+    "difference": "0.43",
+    "implied_share_pct": "23.00",
+    "matches_derivation_within_1": true,
+    "product": "115335.57",
+    "product_rounded": "115336",
+    "reported_count": 115336
   }
 }

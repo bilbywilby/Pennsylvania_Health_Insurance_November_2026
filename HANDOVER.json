@@ -1,0 +1,327 @@
+{
+  "handover_version": "2.0",
+  "as_of": "2026-11-11",
+  "project": {
+    "name": "Pennsylvania ACA individual and small-group market audit, plan year 2027 (November 2026 packet)",
+    "version": "3.1.0-beta.1",
+    "release_stage": "beta",
+    "operator": "bilbywilby",
+    "purpose": "Public-interest, fully sourced reference on PY2027 rates, enrollment and open enrollment, with every claim tiered by evidence.",
+    "secrets_stored_in_file": false
+  },
+  "repository": {
+    "slug": "bilbywilby/Pennsylvania_Health_Insurance_November_2026",
+    "url": "https://github.com/bilbywilby/Pennsylvania_Health_Insurance_November_2026",
+    "default_branch": "main",
+    "intended_work_dir": "~/Pennsylvania_Health_Insurance_November_2026 (internal Termux storage; never run git inside /sdcard)",
+    "last_known_remote_state": "origin/main held three web-upload commits (6707268, 2a3d251, bf09895) with about 50 flat files including chat-transcript .txt files, a 2.4 MB PNG and duplicate copies of packet files; LICENSE, SECURITY.md and .github/actions-scripts/fetch-issues.mjs also present (observed 2026-11-11).",
+    "remote_state_needs_confirmation": true,
+    "publish_tool": "scripts/ez_reconcile_repo.sh (delivered separately; plan-only by default, never force-pushes)"
+  },
+  "current_state": {
+    "key_findings": {
+      "individual_requested_pct": 17.14,
+      "individual_approved_pct": 15.97,
+      "small_group_requested_pct": 11.49,
+      "small_group_approved_pct": 10.28,
+      "denied_million_usd": 94.7,
+      "carriers_in_pid_release": 14,
+      "carriers_approved_over_10pct": 11,
+      "carriers_raised_after_review": [
+        "Health Partners Plans Inc",
+        "Keystone Health Plan East",
+        "QCC Insurance Company"
+      ],
+      "open_enrollment": "2026-11-01 to 2027-01-15; enroll by 2026-12-15 for 2027-01-01 coverage"
+    },
+    "evidence_tiers": {
+      "VERIFIED": "primary document read",
+      "SECONDARY": "credible reporting",
+      "CARRIED": "earlier project work, not re-checked",
+      "UNVERIFIED": "no source; must be bracketed",
+      "CONTRADICTED": "a retrieved source disagrees",
+      "NOT_FOUND": "searched, not located"
+    },
+    "publication_rule": "Only VERIFIED items, or items shown with their tier, may appear in public text.",
+    "claims_ledger_rows": 60,
+    "claims_by_tier": {
+      "CARRIED": 3,
+      "CONTRADICTED": 13,
+      "NOT_FOUND": 1,
+      "SECONDARY": 3,
+      "UNVERIFIED": 34,
+      "VERIFIED": 6
+    },
+    "source_inventory_rows": 28,
+    "sources_by_tier": {
+      "CARRIED": 12,
+      "SECONDARY": 12,
+      "UNVERIFIED": 1,
+      "VERIFIED": 3
+    },
+    "conflicts_total": 14,
+    "conflicts_open": [
+      "X03 Peak enrollment",
+      "X04 Sept 2026 enrollment",
+      "X05 Enrollment drop during OE 2026",
+      "X08 Partners Insurance Company PY2026",
+      "X09 Ambetter Health Solutions of Pennsylvania",
+      "X13 CSR enrollee count"
+    ],
+    "monthly_audit_status": "WARNING",
+    "calculations": [
+      "C1_trend",
+      "C2_attrition",
+      "C3_rate_review",
+      "C4_decomposition",
+      "C5_oop",
+      "C6_counties",
+      "C7_race_sum",
+      "C8_metal",
+      "C9_csr"
+    ],
+    "files_in_packet": 50
+  },
+  "implemented_capabilities": {
+    "calculations_reproducible": "scripts/calc_audit.py (Decimal arithmetic; writes audit/calc_results.json and audit/calc_schedule.csv)",
+    "area_tables_and_one_pagers": "scripts/build_area_tables.py",
+    "consistency_validator": "scripts/validate_packet.py",
+    "provenance_gate": "scripts/06_provenance_gate.py (stray AI transcripts, duplicate county lists, excluded citations)",
+    "manifest": "scripts/hash_manifest.py -> MANIFEST.sha256",
+    "handover_generator": "scripts/generate_handover.py",
+    "ci": ".github/workflows/validate.yml (regenerate, git diff --exit-code, validate, gate, tests)",
+    "not_implemented": [
+      "automated PID or Pennie data collection",
+      "crosswalk test execution (template only)",
+      "PDF one-pagers (markdown only)"
+    ]
+  },
+  "environment": {
+    "observed_at": "2026-11-09 (ez_repo_recon report)",
+    "device": "Termux on Android aarch64",
+    "python": "3.14.x",
+    "bash": "5.3.x",
+    "git": "2.56.x",
+    "gh": "2.103.x",
+    "sh_is_dash": true,
+    "rule": "Run scripts with bash (or let them re-exec); `sh script.sh` fails on bash-only syntax. Paste-safe scripts are ASCII only.",
+    "paths": {
+      "downloads": "/sdcard/Download",
+      "review_and_backups": "~/pa_nov2026_review/<timestamp>/",
+      "backup_bundle": "~/pa_nov2026_backup.bundle"
+    }
+  },
+  "known_issues": [
+    {
+      "id": "AUTH-001",
+      "priority": "high",
+      "status": "open as of 2026-11-11",
+      "description": "git over SSH failed with 'Permission denied (publickey)' (~/.ssh changed 2026-11-10 23:10).",
+      "next_action": "Run `gh auth login -p https -w` (reconcile script falls back to HTTPS automatically) or re-add an SSH key at github.com/settings/keys."
+    },
+    {
+      "id": "REMOTE-001",
+      "priority": "high",
+      "status": "open",
+      "description": "Remote main carries web-uploaded flat files; local main (packet commit plus an ours-merge) is unpushed.",
+      "next_action": "Run the reconcile script in plan mode, read the plan, then run with --push."
+    },
+    {
+      "id": "ZIP-001",
+      "priority": "medium",
+      "status": "open",
+      "description": "The reconcile script needs a v3.0.1-or-later packet zip in Downloads.",
+      "next_action": "Download the beta zip to /sdcard/Download."
+    },
+    {
+      "id": "SCRIPT-001",
+      "priority": "low",
+      "status": "open",
+      "description": "~/ez_reconcile_repo.sh on the device was about 4 KB, far smaller than the delivered script; ~/ez_reconcile_repo.py was the first, unpatched version.",
+      "next_action": "Re-download and re-paste the current script."
+    },
+    {
+      "id": "HOME-001",
+      "priority": "medium",
+      "status": "standing",
+      "description": "Sensitive files live in the Termux home (.ssh, .secrets, .wg_private_key, .pa_audit_salt, .npmrc).",
+      "next_action": "Never `git add -A` from ~; keep them in .gitignore_global."
+    },
+    {
+      "id": "PATH-001",
+      "priority": "low",
+      "status": "open",
+      "description": "PATH was prefixed with /storage/emulated/0/root (shared storage).",
+      "next_action": "Append instead of prepend, or remove."
+    },
+    {
+      "id": "DATA-001",
+      "priority": "medium",
+      "status": "open",
+      "description": "Pennie's primary enrollment dataset was not located; exact September 2026 count unverified.",
+      "next_action": "Find the Pennie dataset; replace the rounded 417,000."
+    },
+    {
+      "id": "DATA-002",
+      "priority": "medium",
+      "status": "open",
+      "description": "CMS 2027 cost-sharing PDF not opened; enhanced-credit contribution caps not re-sourced.",
+      "next_action": "Open the PDF; cite IRS or KFF for the caps."
+    },
+    {
+      "id": "DATA-003",
+      "priority": "medium",
+      "status": "open",
+      "description": "KRI formulas were blank in the submitted draft; packet definitions are reconstructions.",
+      "next_action": "Owner to confirm definitions."
+    }
+  ],
+  "decisions_needed_from_owner": [
+    "Repository visibility and license (a LICENSE file already exists on the remote; confirm it is the intended one).",
+    "Whether removed upload files (including chat transcripts) justify a history rewrite. Default: no; the cleanup is a normal commit and history is preserved.",
+    "KRI definitions (known_issues DATA-003)."
+  ],
+  "verification": {
+    "commands": [
+      {
+        "command": "python3 scripts/calc_audit.py && python3 scripts/build_area_tables.py && python3 scripts/generate_handover.py",
+        "expected": "files regenerate; git diff is empty"
+      },
+      {
+        "command": "python3 scripts/validate_packet.py",
+        "expected": "exit 0"
+      },
+      {
+        "command": "python3 scripts/06_provenance_gate.py",
+        "expected": "exit 0"
+      },
+      {
+        "command": "python3 -m unittest discover -s tests",
+        "expected": "9 tests, OK"
+      },
+      {
+        "command": "sha256sum -c MANIFEST.sha256",
+        "expected": "all OK"
+      }
+    ],
+    "caveat": "A clean run means internal consistency and no known contamination; it does not confirm any figure against a primary source."
+  },
+  "integrity": {
+    "algorithm": "sha256",
+    "manifest": "MANIFEST.sha256",
+    "generate_command": "python3 scripts/hash_manifest.py",
+    "note": "HANDOVER.json is covered by the manifest; regenerate it before the manifest."
+  },
+  "backup_policy": {
+    "required_before_destructive_operations": true,
+    "recommended_bundle_command": "git bundle create ~/pa_nov2026_backup.bundle --all",
+    "existing": [
+      "~/pa_nov2026_backup.bundle (created 2026-11-11 before the ours-merge)",
+      "~/pa_nov2026_review/<timestamp>/work_dir_backup.bundle (created by the reconcile script)"
+    ],
+    "never_without_backup_and_explicit_consent": [
+      "git clean -fd",
+      "git reset --hard",
+      "git push --force",
+      "rm -rf",
+      "history rewrite"
+    ]
+  },
+  "recovery_procedure": [
+    "Do nothing destructive. Check `git -C ~/Pennsylvania_Health_Insurance_November_2026 status -sb` and `git log --oneline -5`.",
+    "If a rebase or merge is half-done: `git rebase --abort` (or merge --abort) restores the pre-operation state.",
+    "Restore from a bundle: `git clone ~/pa_nov2026_backup.bundle ~/restore_test`.",
+    "Re-run the reconcile script in plan mode; it clones fresh and never needs your work dir to be clean."
+  ],
+  "quarantined_documents": [
+    "Cross-Sectional Metadata Analysis",
+    "Geographic Rating Area Summaries: Pennsylvania PY2027 ACA Market Analysis"
+  ],
+  "excluded_citations": "see data/statutes_2026.json (excluded_citations) and docs/source_reliability.md; never write them outside those two files",
+  "working_agreements": [
+    "Verify against a primary source before a claim enters any output; pasted AI output is never ground truth.",
+    "Label every rate with plan year and requested or approved.",
+    "Run code before calling it ready; paste raw output when something fails."
+  ],
+  "pending_actions": [
+    "Authenticate to GitHub (AUTH-001).",
+    "Download the beta zip to /sdcard/Download (ZIP-001).",
+    "Run ez_reconcile_repo.sh (plan), read the plan, then run with --push.",
+    "Open https://github.com/bilbywilby/Pennsylvania_Health_Insurance_November_2026 and confirm the tree matches this packet.",
+    "Open the CMS 2027 cost-sharing guidance PDF and confirm $12,000 / $24,000 (currently SECONDARY).",
+    "Locate Pennie's primary enrollment dataset for the September 2026 count.",
+    "Re-pull PID's 2026 carrier-level approved rates before any year-over-year carrier comparison (conflict X08).",
+    "Check whether Ambetter Health Solutions of Pennsylvania has a 2027 filing (conflict X09).",
+    "Quote 45 CFR 155.335(j) text from eCFR and rewrite the crosswalk hierarchy.",
+    "Collect CMS IDR national monthly counts and PID complaint statistics for the next audit."
+  ],
+  "test_matrix": [
+    {
+      "name": "validator",
+      "command": "python3 scripts/validate_packet.py",
+      "expected_exit_code": 0
+    },
+    {
+      "name": "gate",
+      "command": "python3 scripts/06_provenance_gate.py",
+      "expected_exit_code": 0
+    },
+    {
+      "name": "unit tests",
+      "command": "python3 -m unittest discover -s tests",
+      "expected_exit_code": 0
+    }
+  ],
+  "file_inventory": [
+    ".gitattributes",
+    ".github/workflows/validate.yml",
+    ".gitignore",
+    "CHANGELOG.md",
+    "HANDOVER.json",
+    "MANIFEST.sha256",
+    "README.md",
+    "VERSION",
+    "audit/calc_results.json",
+    "audit/calc_schedule.csv",
+    "audit/conflicts_register.csv",
+    "audit/crosswalk_test_log_template.csv",
+    "audit/monthly_audit_2026-11.json",
+    "data/claims_ledger.csv",
+    "data/public/calc_inputs.json",
+    "data/public/enrollment_series.csv",
+    "data/public/key_dates.csv",
+    "data/public/oop_limits.csv",
+    "data/public/pa_county_fips_crosswalk.json",
+    "data/public/py2027_area_rate_ranges.csv",
+    "data/public/py2027_carrier_footprint_by_area.csv",
+    "data/public/py2027_individual_rates_pid_2026-09-18.csv",
+    "data/public/py2027_small_group_requested_carried.csv",
+    "data/public/py2027_statewide_pid_2026-09-18.csv",
+    "data/public/rating_area_counties.csv",
+    "data/public/source_inventory.csv",
+    "data/statutes_2026.json",
+    "docs/SSOT.md",
+    "docs/source_reliability.md",
+    "report/PA_ACA_Forensic_Audit_PY2027_November_2026.md",
+    "report/REVIEW_OF_SUBMITTED_DRAFT.md",
+    "report/one_pagers/rating_area_1.md",
+    "report/one_pagers/rating_area_2.md",
+    "report/one_pagers/rating_area_3.md",
+    "report/one_pagers/rating_area_4.md",
+    "report/one_pagers/rating_area_5.md",
+    "report/one_pagers/rating_area_6.md",
+    "report/one_pagers/rating_area_7.md",
+    "report/one_pagers/rating_area_8.md",
+    "report/one_pagers/rating_area_9.md",
+    "report/rating_area_summaries.md",
+    "scripts/06_provenance_gate.py",
+    "scripts/build_area_tables.py",
+    "scripts/calc_audit.py",
+    "scripts/generate_handover.py",
+    "scripts/hash_manifest.py",
+    "scripts/push_to_github.sh",
+    "scripts/validate_packet.py",
+    "templates/consumer_open_enrollment_2027.md",
+    "tests/test_packet.py"
+  ]
+}

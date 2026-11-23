@@ -8,4 +8,3 @@ as_of,enrollees,description,tier,source_url,note
 2026-09,417000,"'As of September 2026, 417,000 people are enrolled' (rounded)",SECONDARY,https://insurancenewsnet.com/oarticle/legislators-pushing-for-healthcare-coverage-respond-to-new-pennie-enrollment-numbers,PA House legislators' release 2026-09-10 (States News Service); rounded to nearest thousand; primary Pennie dataset not located
 DRAFT-501459,501459,Draft 'peak PY2026 OEP headcount',UNVERIFIED,,"Not found in any retrieved source. Pennie reports 486,000 at close of 2026 OE and a 497,000 all-time peak in 2025"
 DRAFT-417158,417158,Draft 'September 2026 active enrollment' (exact),UNVERIFIED,,"Consistent with the rounded ~417,000 report but the exact figure was not located"
-2026-10-01,406984,"Pennie enrollment as of October 1, 2026",SECONDARY,,Captured from PY2027 audit summary; verify primary Pennie release
