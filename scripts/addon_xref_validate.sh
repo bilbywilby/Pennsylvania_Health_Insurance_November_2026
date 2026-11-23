@@ -9,6 +9,11 @@ from pathlib import Path
 handover = json.loads(Path("HANDOVER.json").read_text())
 calc = json.loads(Path("audit/calc_results.json").read_text())
 errors = []
+def _f(val):
+    if isinstance(val, (int, float)): return float(val)
+    return float(str(val).strip().rstrip('%'))
+
+
 checks = 0
 r3 = calc["C3_rate_review"]
 kf = handover.get("current_state", {}).get("key_findings", {})
@@ -19,10 +24,10 @@ if kf.get("carriers_approved_over_10pct") != r3["n_approved_over_10pct"]:
     errors.append(f"carriers_approved_over_10pct: HANDOVER={kf.get('carriers_approved_over_10pct')} vs calc={r3['n_approved_over_10pct']}")
 checks += 1
 r4 = calc["C4_decomposition"]
-if kf.get("individual_approved_pct") and abs(float(kf["individual_approved_pct"]) - r4["pid_approved"]) > 0.01:
+if kf.get("individual_approved_pct") and abs(_f(kf["individual_approved_pct"]) - _f(r4["pid_approved"])) > 0.01:
     errors.append(f"individual_approved_pct: HANDOVER={kf['individual_approved_pct']} vs calc={r4['pid_approved']}")
 checks += 1
-if kf.get("individual_requested_pct") and abs(float(kf["individual_requested_pct"]) - r4["pid_requested"]) > 0.01:
+if kf.get("individual_requested_pct") and abs(_f(kf["individual_requested_pct"]) - _f(r4["pid_requested"])) > 0.01:
     errors.append(f"individual_requested_pct: HANDOVER={kf['individual_requested_pct']} vs calc={r4['pid_requested']}")
 checks += 1
 r2 = calc["C2_attrition"]["A_draft"]

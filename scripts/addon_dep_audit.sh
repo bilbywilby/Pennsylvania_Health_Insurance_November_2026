@@ -46,7 +46,8 @@ for py in sorted(Path('.').rglob('*.py')):
         elif isinstance(node, ast.ImportFrom):
             if node.module:
                 all_imports.add(node.module.split('.')[0])
-third_party = sorted(all_imports - STDLIB)
+LOCAL_MODULES = {'06_provenance_gate', 'build_area_tables', 'calc_audit', 'generate_handover', 'hash_manifest', 'validate_packet'}
+third_party = sorted(all_imports - STDLIB - LOCAL_MODULES)
 print(f"  Files scanned:  {files_scanned}")
 print(f"  Unique imports: {len(all_imports)}")
 print(f"  All stdlib:     {'YES' if not third_party else 'NO'}")

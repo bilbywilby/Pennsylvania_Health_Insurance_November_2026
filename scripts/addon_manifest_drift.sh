@@ -24,8 +24,10 @@ current = {}
 for p in sorted(Path('.').rglob('*')):
     if not p.is_file():
         continue
-    rel = p.as_posix()
-    if any(part in ('.git', '__pycache__', '.pytest_cache') for part in rel.split('/')):
+    rel = p.relative_to('.').as_posix()
+    if rel == 'MANIFEST.sha256' or p.suffix in ('.pyc', '.zip'):
+        continue
+    if any(part in ('.git', '__pycache__', '.pytest_cache', 'dist') for part in rel.split('/')):
         continue
     current[rel] = hashlib.sha256(p.read_bytes()).hexdigest()
 added = sorted(set(current) - set(manifest))
