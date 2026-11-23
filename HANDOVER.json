@@ -80,7 +80,7 @@
       "C8_metal",
       "C9_csr"
     ],
-    "files_in_packet": 70
+    "files_in_packet": 73
   },
   "implemented_capabilities": {
     "calculations_reproducible": "scripts/calc_audit.py (Decimal arithmetic; writes audit/calc_results.json and audit/calc_schedule.csv)",
@@ -281,6 +281,7 @@
     "MANIFEST.sha256",
     "README.md",
     "VERSION",
+    "audit/advocacy_forensic_summary.json",
     "audit/calc_results.json",
     "audit/calc_schedule.csv",
     "audit/conflicts_register.csv",
@@ -326,6 +327,7 @@
     "scripts/addon_snapshot.sh",
     "scripts/addon_storage_health.sh",
     "scripts/addon_xref_validate.sh",
+    "scripts/advocacy_forensic_math.py",
     "scripts/build_area_tables.py",
     "scripts/calc_audit.py",
     "scripts/generate_handover.py",
@@ -342,6 +344,7 @@
     "templates/appeals_and_disputes/pharmacy_exception_request.md",
     "templates/appeals_and_disputes/wiki_page_3_appeals_dispute_frameworks.md",
     "templates/consumer_open_enrollment_2027.md",
+    "tests/test_advocacy_forensic_math.py",
     "tests/test_packet.py"
   ]
 }

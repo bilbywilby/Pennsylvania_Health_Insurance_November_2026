@@ -1,0 +1,87 @@
+{
+  "claim_variance_examples": {
+    "overcharge_with_balance_bill": {
+      "actual_patient_resp": "350.00",
+      "balance_billing_excess": "325.00",
+      "billed_amount": "450.00",
+      "contract_modifier": "1.2500",
+      "expected_patient_resp": "25.00",
+      "fair_market_value": "125.00",
+      "medicare_base": "100.00",
+      "risk_level": "CRITICAL_OVERCHARGE",
+      "variance_amount": "325.00",
+      "variance_pct": "260.00"
+    },
+    "within_threshold": {
+      "actual_patient_resp": "25.00",
+      "balance_billing_excess": "0.00",
+      "billed_amount": "140.00",
+      "contract_modifier": "1.2500",
+      "expected_patient_resp": "25.00",
+      "fair_market_value": "125.00",
+      "medicare_base": "100.00",
+      "risk_level": "PASS",
+      "variance_amount": "15.00",
+      "variance_pct": "12.00"
+    }
+  },
+  "fpl_subsidy_examples": {
+    "hh1_200pct_standard": {
+      "annual_income": "31300.00",
+      "applicable_percentage": "0.0650",
+      "fpl_percent": "200.00",
+      "fpl_threshold": "15650.00",
+      "household_size": 1,
+      "is_above_400_cliff": false,
+      "max_annual_contribution": "2034.50",
+      "monthly_benchmark_premium": "650.00",
+      "monthly_capped_premium": "169.54",
+      "monthly_subsidy": "480.46"
+    },
+    "hh2_410pct_enhanced_cap": {
+      "annual_income": "86715.00",
+      "applicable_percentage": "0.0850",
+      "fpl_percent": "410.00",
+      "fpl_threshold": "21150.00",
+      "household_size": 2,
+      "is_above_400_cliff": true,
+      "max_annual_contribution": "7370.78",
+      "monthly_benchmark_premium": "1200.00",
+      "monthly_capped_premium": "614.23",
+      "monthly_subsidy": "585.77"
+    },
+    "hh2_410pct_standard_cliff": {
+      "annual_income": "86715.00",
+      "applicable_percentage": "1.0000",
+      "fpl_percent": "410.00",
+      "fpl_threshold": "21150.00",
+      "household_size": 2,
+      "is_above_400_cliff": true,
+      "max_annual_contribution": "14400.00",
+      "monthly_benchmark_premium": "1200.00",
+      "monthly_capped_premium": "1200.00",
+      "monthly_subsidy": "0.00"
+    }
+  },
+  "resilience_examples": {
+    "cpt_72148_critical": {
+      "adjusted_benchmark": "350.00",
+      "allowed_amount": "1200.00",
+      "allowed_to_benchmark_ratio": "3.4286",
+      "cpt_code": "72148",
+      "medicare_benchmark": "350.00",
+      "resilience_score": "0.00",
+      "status": "CRITICAL_EXPOSURE"
+    },
+    "cpt_99214_moderate": {
+      "adjusted_benchmark": "125.00",
+      "allowed_amount": "210.00",
+      "allowed_to_benchmark_ratio": "1.6800",
+      "cpt_code": "99214",
+      "medicare_benchmark": "125.00",
+      "resilience_score": "77.07",
+      "status": "MODERATE_MARKUP"
+    }
+  },
+  "schema_version": "1.0"
+}
