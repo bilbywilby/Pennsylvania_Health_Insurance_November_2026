@@ -1,3 +1,9 @@
+## [Unreleased - 2026-11-23]
+
+- Added `2026-10-01` Pennie enrollment row (`406984`, tier `SECONDARY`) to `data/public/enrollment_series.csv`.
+- Rebuilt `report/rating_area_summaries.md` and `data/public/py2027_area_rate_ranges.csv` via `scripts/build_area_tables.py`.
+- Recomputed `audit/calc_results.json` via `scripts/calc_audit.py` and re-verified `validate_packet.py`, `06_provenance_gate.py`, and `pytest`.
+
 # Changelog
 
 ## 3.0.0 - 2026-11-08
