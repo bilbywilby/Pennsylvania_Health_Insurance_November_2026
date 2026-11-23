@@ -6,6 +6,7 @@ echo "=== DEPENDENCY AUDIT (stdlib-only verification) ==="
 python3 << 'PYEOF'
 import ast, sys
 from pathlib import Path
+LOCAL_MODULES = {"advocacy_forensic_math", "build_area_tables", "calc_audit", "generate_handover", "hash_manifest", "validate_packet"}
 STDLIB = {
     'abc','argparse','array','ast','asyncio','atexit','base64','binascii',
     'bisect','builtins','bz2','calendar','collections','colorsys','configparser',
