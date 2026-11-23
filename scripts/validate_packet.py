@@ -206,3 +206,10 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+# [advocacy_forensic_math hook]
+try:
+    from advocacy_forensic_math import build_advocacy_forensic_summary
+    build_advocacy_forensic_summary(Path(__file__).resolve().parents[1])
+except Exception as exc:
+    print(f'[WARN] advocacy_forensic_math summary skipped: {exc}')
