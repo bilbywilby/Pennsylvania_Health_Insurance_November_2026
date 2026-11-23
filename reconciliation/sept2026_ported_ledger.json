@@ -1,0 +1,28 @@
+{
+  "source_repo": "Pennsylvania_Healthcare_September_2026",
+  "target_repo": "Pennsylvania_Health_Insurance_November_2026",
+  "ported": [
+    "data/public/approved_rates_2026.csv",
+    "templates/appeals_and_disputes/carters_oor_appeal_template.md",
+    "templates/appeals_and_disputes/clinical_appeal_framework.md",
+    "templates/appeals_and_disputes/formal_appeal_medical_necessity.md",
+    "templates/appeals_and_disputes/nsa_balance_billing_dispute.md",
+    "templates/appeals_and_disputes/pa_rtk_request_operational_guide.md",
+    "templates/appeals_and_disputes/pa_rtkl_request_review_and_polished_templates.md",
+    "templates/appeals_and_disputes/pharmacy_exception_request.md",
+    "templates/appeals_and_disputes/wiki_page_3_appeals_dispute_frameworks.md"
+  ],
+  "skipped_existing": [],
+  "missing_sources": [],
+  "sha256_ported": {
+    "data/public/approved_rates_2026.csv": "c77886375b410a2e2f00529f008cc4788bfd5fcc41217d467f2903b5ebad1ff0",
+    "templates/appeals_and_disputes/carters_oor_appeal_template.md": "8cf03a545d596c6700594292ff5396ae9d2e10190ff1e66728b50acabdf04b9e",
+    "templates/appeals_and_disputes/clinical_appeal_framework.md": "6cff5077e582bcca743f6ffef80492d0d056191f8d621dae8ce8270a938b6812",
+    "templates/appeals_and_disputes/formal_appeal_medical_necessity.md": "71ada27dd5f470d054ae815ea5a12b86611f4dbc77398d3c085f3c69f8155324",
+    "templates/appeals_and_disputes/nsa_balance_billing_dispute.md": "b64978d3afe33bbcea1992797fe1fff9d74da65fd587705ea5bab9edc9619731",
+    "templates/appeals_and_disputes/pa_rtk_request_operational_guide.md": "f7e95b991304b0d121cd5fb2c0aa4b519ef3861b84e6deb83c817d767db9decc",
+    "templates/appeals_and_disputes/pa_rtkl_request_review_and_polished_templates.md": "c25107397b0850f7226d1893716c9c02e1885b7a84e5efaf17023999776274c0",
+    "templates/appeals_and_disputes/pharmacy_exception_request.md": "d026c243b661626fe8d72269e2e7f3c0ffe57999385dbb9f0763f2fca013a062",
+    "templates/appeals_and_disputes/wiki_page_3_appeals_dispute_frameworks.md": "6ddd45d21661e92befa3a3806bde21f466f4197af94cb2d49d2920faf29f2089"
+  }
+}

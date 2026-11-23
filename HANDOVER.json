@@ -80,7 +80,7 @@
       "C8_metal",
       "C9_csr"
     ],
-    "files_in_packet": 61
+    "files_in_packet": 70
   },
   "implemented_capabilities": {
     "calculations_reproducible": "scripts/calc_audit.py (Decimal arithmetic; writes audit/calc_results.json and audit/calc_schedule.csv)",
@@ -287,6 +287,7 @@
     "audit/crosswalk_test_log_template.csv",
     "audit/monthly_audit_2026-11.json",
     "data/claims_ledger.csv",
+    "data/public/approved_rates_2026.csv",
     "data/public/calc_inputs.json",
     "data/public/enrollment_series.csv",
     "data/public/key_dates.csv",
@@ -332,6 +333,14 @@
     "scripts/install_addons.sh",
     "scripts/push_to_github.sh",
     "scripts/validate_packet.py",
+    "templates/appeals_and_disputes/carters_oor_appeal_template.md",
+    "templates/appeals_and_disputes/clinical_appeal_framework.md",
+    "templates/appeals_and_disputes/formal_appeal_medical_necessity.md",
+    "templates/appeals_and_disputes/nsa_balance_billing_dispute.md",
+    "templates/appeals_and_disputes/pa_rtk_request_operational_guide.md",
+    "templates/appeals_and_disputes/pa_rtkl_request_review_and_polished_templates.md",
+    "templates/appeals_and_disputes/pharmacy_exception_request.md",
+    "templates/appeals_and_disputes/wiki_page_3_appeals_dispute_frameworks.md",
     "templates/consumer_open_enrollment_2027.md",
     "tests/test_packet.py"
   ]
