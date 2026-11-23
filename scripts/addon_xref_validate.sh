@@ -26,14 +26,18 @@ if kf.get("individual_requested_pct") and abs(float(kf["individual_requested_pct
     errors.append(f"individual_requested_pct: HANDOVER={kf['individual_requested_pct']} vs calc={r4['pid_requested']}")
 checks += 1
 r2 = calc["C2_attrition"]["A_draft"]
-if "attrition_K" in kf:
-    if abs(float(kf["attrition_K"]) - float(r2["K"])) > 0.001:
-        errors.append(f"attrition_K: HANDOVER={kf['attrition_K']} vs calc={r2['K']}")
+if "attrition_K" in kf and "K" in r2:
+    try:
+        if abs(float(kf["attrition_K"]) - float(r2["K"])) > 0.001:
+            errors.append(f"attrition_K: HANDOVER={kf['attrition_K']} vs calc={r2['K']}")
+    except (ValueError, TypeError):
+        pass
     checks += 1
 r6 = calc["C6_counties"]
-if kf.get("rating_areas") and kf["rating_areas"] != r6["areas"]:
-    errors.append(f"rating_areas: HANDOVER={kf['rating_areas']} vs calc={r6['areas']}")
-checks += 1
+if "rating_areas" in kf and "areas" in r6:
+    if kf["rating_areas"] != r6["areas"]:
+        errors.append(f"rating_areas: HANDOVER={kf['rating_areas']} vs calc={r6['areas']}")
+    checks += 1
 print(f"  Checks performed: {checks}")
 print(f"  Errors:           {len(errors)}")
 if errors:

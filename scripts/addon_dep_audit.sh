@@ -32,7 +32,7 @@ STDLIB = {
 all_imports = set()
 files_scanned = 0
 for py in sorted(Path('.').rglob('*.py')):
-    if any(part in ('.git', '__pycache__', '.pytest_cache') for part in py.parts):
+    if any(part in ('.git', '__pycache__', '.pytest_cache', 'tests') for part in py.parts):
         continue
     files_scanned += 1
     try:

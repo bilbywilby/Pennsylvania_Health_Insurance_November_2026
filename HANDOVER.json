@@ -80,7 +80,7 @@
       "C8_metal",
       "C9_csr"
     ],
-    "files_in_packet": 50
+    "files_in_packet": 61
   },
   "implemented_capabilities": {
     "calculations_reproducible": "scripts/calc_audit.py (Decimal arithmetic; writes audit/calc_results.json and audit/calc_schedule.csv)",
@@ -315,10 +315,21 @@
     "report/one_pagers/rating_area_9.md",
     "report/rating_area_summaries.md",
     "scripts/06_provenance_gate.py",
+    "scripts/addon_clean_caches.sh",
+    "scripts/addon_dashboard.sh",
+    "scripts/addon_dep_audit.sh",
+    "scripts/addon_gen_changelog.sh",
+    "scripts/addon_git_hygiene.sh",
+    "scripts/addon_manifest_drift.sh",
+    "scripts/addon_release_checklist.sh",
+    "scripts/addon_snapshot.sh",
+    "scripts/addon_storage_health.sh",
+    "scripts/addon_xref_validate.sh",
     "scripts/build_area_tables.py",
     "scripts/calc_audit.py",
     "scripts/generate_handover.py",
     "scripts/hash_manifest.py",
+    "scripts/install_addons.sh",
     "scripts/push_to_github.sh",
     "scripts/validate_packet.py",
     "templates/consumer_open_enrollment_2027.md",
